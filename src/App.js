@@ -72,7 +72,7 @@ class App extends Component {
             <Switch>
               <Route exact path={["/", "/login"]} component={Login} />
               <Route exact path="/logout" component={Logout} />
-              {/* <Route exact path="/signup" render={() => <SignUpForm />} /> */}
+              {/* <Route exact path="/signup" render={() => <SignUpForm />} />
               <Route exact path="/select" component={Select} />
               <Route path="/topics" component={Browse} />
               <Route path="/post" component={NewPost} />
@@ -80,7 +80,7 @@ class App extends Component {
               <Route exact path="/profile" component={Profile} />
               <Route exact path="/topic/:topic" component={Topic} />
               <Route exact path="/settings" component={Settings} />
-              <Route exact path="/about" component={About} />
+              <Route exact path="/about" component={About} /> */}
               <Route path="*" component={NoMatch} />
             </Switch>
           </Container>
