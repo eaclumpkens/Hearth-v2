@@ -1,0 +1,104 @@
+.navbarItems {
+  height: 80px;
+  display: flex;
+  font-size: 1rem;
+}
+
+.navbar-logo {
+  font-family: "Dosis", sans-serif;
+  font-size: 35px;
+  text-align: center;
+  padding-top: 9px;
+  margin-left: 1rem;
+  background: -webkit-linear-gradient(#d9a51f, #be2a0d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.nav-links {
+  letter-spacing: 0.2rem;
+  margin: 0.5em;
+  padding-top: 0.5rem;
+  color: #d9a51f;
+  font-family: "Dosis", sans-serif;
+}
+
+.nav-links:hover {
+  text-decoration: none;
+  color: #d9a51f !important;
+  opacity: 0.5;
+}
+
+.nav-menu {
+  display: grid;
+  grid-template-columns: repeat(9, auto);
+  grid-gap: 10px;
+  list-style: none;
+  text-align: center;
+  width: 100%;
+  padding-top: 30px;
+  justify-content: end;
+}
+
+.fa-bars {
+  color: #d9a51f;
+}
+
+.menu-icon {
+  display: none;
+}
+
+@media screen and (max-width: 1080px) {
+  .navbarItems {
+    position: relative;
+  }
+
+  .nav-menu {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    width: 50%;
+    height: 700px;
+    position: absolute;
+    top: 80px;
+    right: -100%;
+    transition: all 0.5s ease;
+  }
+
+  .nav-menu.active {
+    background-color: rgb(98, 19, 10, 0.95) !important;
+    border: 0.1rem solid #62130a !important;
+    right: 0;
+    transition: all 0.5s ease;
+    z-index: 1;
+    border-radius: 0.5rem;
+  }
+
+  .nav-links {
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    padding-top: 0.3rem;
+    color: #d9a51f;
+  }
+
+  .nav-links:hover {
+    background-color: rgb(98, 19, 10, 0.65) !important;
+    border-radius: 2rem;
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    margin-top: 10px;
+    right: 0;
+    transform: translate(-100%, 50%);
+    font-size: 1.5rem;
+  }
+
+  .fa-times {
+    color: #d9a51f;
+    font-size: 1.5rem;
+  }
+}

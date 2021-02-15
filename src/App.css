@@ -1,38 +1,14 @@
-.App {
-  text-align: center;
+body {
+  background-image: linear-gradient(-45deg, #d9a51f, #d95515, #be2a0d, #62130a);
+  background-size: 120% 300%;
+  font-family: 'Dosis', sans-serif;
+  color: #dee2e6;
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 {
+background: -webkit-linear-gradient(#d9a51f, #be2a0d);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+font-weight: 300;
 }

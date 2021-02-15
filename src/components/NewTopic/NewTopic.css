@@ -1,0 +1,21 @@
+.topic-container {
+  margin: 2em auto;
+  text-align: left;
+  max-width: 500px;
+}
+
+.submit-button {
+  margin-top: 1em;
+  border: 1px solid #d95515 !important;
+  background-color: rgba(185, 75, 20, 0.2) !important;
+}
+
+@media (max-width: 600px) {
+  .topic-container {
+    margin: 1.5em;
+  }
+
+  #mini-picker {
+    margin: 1em 0em;
+  }
+}

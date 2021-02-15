@@ -1,0 +1,28 @@
+.review-container {
+  margin: 2em auto;
+  text-align: left;
+  max-width: 500px;
+}
+
+.similar-topics {
+  margin-bottom: 0.5em;
+}
+
+.submit-button {
+  margin-top: 1em;
+  border: 1px solid #d95515;
+  background-color: rgba(185, 75, 20, 0.2);
+}
+
+.submit-buttont:hover {
+  border: 1px solid #d95515;
+  background-color: rgba(185, 75, 20);
+}
+
+/* -------------------Mobile View -------------- */
+@media (max-width: 680px) {
+  .review-container {
+    margin: 1.5em;
+    max-height: fit-content;
+  }
+}

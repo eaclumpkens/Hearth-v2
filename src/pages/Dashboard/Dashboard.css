@@ -1,0 +1,98 @@
+h2 {
+  font-size: 110% !important;
+  font-weight: 500 !important;
+  margin-left: 0.8rem !important;
+  margin-top: -0.5rem !important;
+  letter-spacing: 0.35rem;
+  text-align: left;
+}
+
+.dashboard-container {
+  margin: 2rem 5rem;
+}
+
+.activity-container,
+#left-block {
+  padding: -1.5rem !important;
+  overflow: scroll;
+}
+
+/* LEFT BLOCKS ---------------------------------------------------------- */
+#left-block {
+  background-color: rgb(217, 85, 21, 0.35) !important;
+  border: 1px solid #d95515 !important;
+  margin-bottom: 0.5rem;
+}
+
+/* USER INFO BLOCK  */
+.user-container {
+  text-align: center;
+  max-height: 15rem;
+  overflow: hidden !important;
+}
+.dash-avatar {
+  max-width: 4.5rem;
+  border-radius: 50%;
+  opacity: 0.85;
+}
+
+.dash-avatar:hover {
+  opacity: 0.8;
+}
+
+.dash-username {
+  font-size: 200%;
+  letter-spacing: 0.1em;
+  padding: auto;
+  margin: 0.2em;
+  line-height: 1em;
+}
+
+/* POLLS BLOCK  */
+.polls-container {
+  min-height: 15rem;
+}
+
+/* SIMILAR USERS BLOCK   */
+.similar-container {
+  text-align: center;
+  height: 15rem;
+}
+
+/* ACTIVITY BLOCK ---------------------------------------------------------- */
+.activity-container {
+  background-color: transparent !important;
+  margin-top: -1.9em;
+}
+
+.activity-title {
+  color: #d9a51f;
+}
+
+/* MOBILE ---------------------------------------------------------------------- */
+@media (max-width: 1000px) {
+  .dashboard-container {
+    margin: 0rem 0.5rem 1.5rem 0.1rem;
+  }
+
+  .dash-avatar {
+    width: 4em;
+  }
+
+  .dash-username,
+  .polls-container,
+  #left-block h2 {
+    display: none;
+  }
+
+  #left-block {
+    margin: 0em -0.1em 0.5em 0.5em;
+    min-width: none;
+    max-height: 50%;
+  }
+
+  .activity-title {
+    line-height: 1em;
+    padding: 1em 0em;
+  }
+}
