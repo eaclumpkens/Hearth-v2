@@ -1,70 +1,149 @@
-# Getting Started with Create React App
+<p align="center">
+<img src = "public/images/readme/Readmelogo.png" >
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+Designed with community in mind, hearth allows users to rate, review and find something worth reading, listening or watching almost instantly.
 
-In the project directory, you can run:
+[Check out the deployed site here](https://hearthcommunity.netlify.app)
 
-### `yarn start`
+## Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [User Story](#user-story)
+- [Installation](#installation)
+- [Technology](#technology)
+- [Functionality](#functionality)
+- [Future Developments](#future-developments)
+- [Links and Screenshots](#links-and-screenshots)
+- [Created By](#created-by)
+- [License](#license)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## User Story
 
-### `yarn test`
+The average person takes 23 minutes to find something to watch on Netflix and over 7 minutes picking out their next movie. With more time to watch, read and listen than ever before, we have developed an app that allows users to skip the long review threads and answer the question "What's next?" more quickly.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+AS an individual, I would like to find something to watch, read or listen.
+I WANT to be able to make a decision quickly.
+AND find a topic with good reviews/ratings.
+SO I find something to stream or read in a timely manner.
 
-### `yarn build`
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To use this project, first clone the repo in your terminal using the command below:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+$ git clone https://github.com/neylonmc/Hearth.git
+```
 
-### `yarn eject`
+Once the repo is cloned, run the following command:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+$ npm i
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To start the server, run the following command:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+$ npm start
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Technology
 
-## Learn More
+### APIs and Libraries
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- React
+- MongoDB
+- Animate.css
+- React Suite
+- Google Login
+- IMDB API
+- OpenLibrary
+- Random User API
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Functionality
 
-### Code Splitting
+```
+GIVEN a login page, I use my Google account to login in.
+THEN I am presented with my dashboard.
+WHEN I click "profile", I am redirected to my profile page.
+THEN when I click "topics", I can browse the different topics in the app.
+WHEN I click “new post", I am presented with three different choices.
+THEN I fill out the corresponding information based on which choice I click.
+WHEN I click “submit”, the review, topic or poll will be available for others.
+WHEN I click "about", I am presented with information about hearth.
+THEN I can logout if I would no longer like to be logged in to the app.
+WHEN I click the settings icon, I have the ability change preferences.
+THEN I am able to save these preferences for my account.
+WHEN I want to quickly find a topic, I can search in the search bar.
+SO I can find something to watch, read or listen to quickly and efficiently.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
 
-### Analyzing the Bundle Size
+## Future Developments
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### More Topics
 
-### Making a Progressive Web App
+**Allow users to be able to search and review more topics**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Building a larger community through hearth is our ultimate goal. Allowing users to find more topics such as crafts, kid friendly activities, or fun outdoor parks would be ideal. This way, hearth could reach a larger audience and have topics for everyone.
 
-### Advanced Configuration
+### Where To Stream Or Buy
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+**Allow users to be able to see where they can stream shows, music or buy a book**
 
-### Deployment
+Browsing reviews is an easy way to find something to keep yourself entertained quickly. But do you have that streaming service or is it on Amazon Prime? This information will allow users to stream, read and listen to topics even quicker.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Create An Account
 
-### `yarn build` fails to minify
+**Allowing users to create an account through the application instead of through Google.**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Allowing users to create an account through hearth. Easier way to save preferences, get notifications and make the application more tailored to the user.
+
+## Links and Screenshots
+
+Repo: https://github.com/neylonmc/Hearth
+
+Deployed App: https://hearthcommunity.netlify.app
+
+Login Page:
+
+![Login Page](public/images/readme/loginREAD.png)
+
+Dashboard:
+
+![Dashboard](public/images/readme/dashboard.png)
+
+Profile:
+
+![Profile](public/images/readme/profile.png)
+
+Topics:
+
+![Topics](public/images/readme/browse.png)
+
+New Post:
+
+![NewPost](public/images/readme/newtopic.png)
+
+About:
+
+![About](public/images/readme/about.png)
+
+## Created by
+
+- [Elisabeth Clumpkens](https://github.com/eaclumpkens "Visit Elisabeth's GitHub")
+- [Dylan Frank](https://github.com/drfrank22 "Visit Dylan's GitHub")
+- [Joseph Gill](https://github.com/jaguar6105 "Visit Joseph's GitHub")
+- [Meaghan Neylon](https://github.com/neylonmc "Visit Meaghan's GitHub")
+
+## License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+```
+
+```
