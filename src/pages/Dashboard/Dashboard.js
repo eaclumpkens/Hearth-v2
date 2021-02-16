@@ -56,7 +56,8 @@ function Dashboard() {
               </Row>
             <Row>
               <Col>
-                <h1 className="dash-username">{userState.Name}</h1>
+                <h1 className="dash-username">username</h1>
+                {/* <h1 className="dash-username">{userState.Name}</h1> */}
 
               </Col>
             </Row>
