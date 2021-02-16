@@ -4,6 +4,8 @@ const Schema = mongoose.Schema;
 const topicSchema = new Schema({
     // title of topic
     topic: { type: String, required: true },
+    // book, film, tv show, etc.
+    category: { type: String, required: true },
     // label for search menus
     label: { type: String, required: true },
     // value needed for react suite (same as title)
