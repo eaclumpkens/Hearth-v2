@@ -39,7 +39,7 @@ function Profile() {
                 <Col md= {8} >
                     <img 
                         className = "page-image"
-                        src= {sessionState.Image || "./images/no-image.png"}
+                        // src= {sessionState.Image || "./images/no-image.png"}
                         src= "./images/no-image.png"
                         alt= "icon of topic poster"
                     />
