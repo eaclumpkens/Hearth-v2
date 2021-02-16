@@ -45,7 +45,8 @@ function Dashboard() {
                   <a href="/profile">
                     <img
                       className = "dash-avatar"
-                      src={userState.Image || "./images/no-avatar.jpg"}
+                      src= "./images/no-avatar.jpg"
+                      // src={userState.Image || "./images/no-avatar.jpg"}
                       alt="dashboard user avatar"
                     />
                   </a>

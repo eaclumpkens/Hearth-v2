@@ -20,15 +20,17 @@ function Profile() {
 
     setSession(JSON.parse(window.sessionStorage.getItem("myUserEntity")));
     
-        API.getUser(sessionState.Id)
-          .then((res) => {
-            setUser(res.data)
-            console.log(res.data)
-        }).then(() => {
-            console.log("user data pulled")
-        }).catch(err => err)
+//         API.getUser(sessionState.Id)
+//           .then((res) => {
+//             setUser(res.data)
+//             console.log(res.data)
+//         }).then(() => {
+//             console.log("user data pulled")
+//         }).catch(err => err)
 
-  }, [sessionState.Id]);
+//   }, [sessionState.Id]);
+
+}, []);
 
     return(
         <div className="page-container animate__animated animate__fadeIn">
