@@ -20,12 +20,13 @@ function Dashboard() {
   useEffect(() => {
     setUser(JSON.parse(window.sessionStorage.getItem("myUserEntity")));
 
-    API.getUser(userState.Id)
-      .then((res) => {
-        console.log(res.data);
-      })
-      .catch((err) => err);    
-  }, [userState.Id]);
+    // API.getUser(userState.Id)
+    //   .then((res) => {
+    //     console.log(res.data);
+    //   })
+    //   .catch((err) => err);  
+  }, []);  
+  // }, [userState.Id]);
 
 
     return (
