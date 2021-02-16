@@ -1,4 +1,4 @@
-<p align="center">
+<p text-align="center">
 <img src = "public/images/readme/Readmelogo.png" >
 </p>
 
