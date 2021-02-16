@@ -17,7 +17,7 @@ function SearchBar()  {
     
     
       function loadActivities() {
-        API.getActivities()
+        API.getTopics()
           .then(res => {
             setFormObject(res.data);
             console.log(res.data);
