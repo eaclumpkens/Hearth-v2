@@ -15,7 +15,9 @@ import DashActivity from "../../components/DashActivity/DashActivity";
 import Entertainment from "../../utils/TopEntertainment";
 
 function Dashboard() {
-  const [userState, setUser] = useState([]);
+  const [userState, setUser] = useState({
+    Name: ""
+  });
 
   useEffect(() => {
     setUser(JSON.parse(window.sessionStorage.getItem("myUserEntity")));
