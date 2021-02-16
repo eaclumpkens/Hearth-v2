@@ -3,9 +3,8 @@ const Topic = require("./topic");
 const Review = require("./review");
 const User = require("./user");
 
-// Book routes
-router.use("/topic", Topic);
-router.use("/review", Review);
-router.use("/user", User);
+router.use("/topics", Topic);
+router.use("/reviews", Review);
+router.use("/users", User);
 
 module.exports = router;
