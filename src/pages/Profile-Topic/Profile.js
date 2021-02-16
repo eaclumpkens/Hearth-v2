@@ -13,22 +13,22 @@ import Streaming from "../../components/Streaming/Streaming";
 
 function Profile() {
 
-//   const [ sessionState, setSession ] = useState([]);
-//   const [ userState, setUser ] = useState([]);
+  const [ sessionState, setSession ] = useState([]);
+  const [ userState, setUser ] = useState([]);
 
-//   useEffect(() => {
+  useEffect(() => {
 
-//     setSession(JSON.parse(window.sessionStorage.getItem("myUserEntity")));
+    setSession(JSON.parse(window.sessionStorage.getItem("myUserEntity")));
     
-//         API.getUser(sessionState.Id)
-//           .then((res) => {
-//             setUser(res.data)
-//             console.log(res.data)
-//         }).then(() => {
-//             console.log("user data pulled")
-//         }).catch(err => err)
+        API.getUser(sessionState.Id)
+          .then((res) => {
+            setUser(res.data)
+            console.log(res.data)
+        }).then(() => {
+            console.log("user data pulled")
+        }).catch(err => err)
 
-//   }, [sessionState.Id]);
+  }, [sessionState.Id]);
 
     return(
         <div className="page-container animate__animated animate__fadeIn">
