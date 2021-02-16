@@ -15,6 +15,7 @@ const topicSchema = new Schema({
     age_range: { type: Array },
     image: { type: String },
     description: { type: String },
+    //  joins Review schema
     reviews: [{type: Schema.Types.ObjectId, ref: 'Review'}],
     date: { type: Date, default: Date.now }
 });

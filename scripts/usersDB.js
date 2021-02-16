@@ -11,7 +11,7 @@ const userSeed = [
         name: "Nina Anderson",
         username: "nanderson",
         password: "password",
-        image: "https://randomuser.me/api/portraits/med/women/91.jpg"
+        image: "https://randomuser.me/api/portraits/med/women/91.jpg",
     },
     {
         name: "Roger Graham",

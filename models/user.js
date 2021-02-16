@@ -9,7 +9,9 @@ const usersSchema = new Schema({
     username: { type: String, unique: false, required: false },
 	password: { type: String, unique: false, required: false },
     image: {type: String},
+    //  joins Topic schema
     following: [{ type: Schema.Types.ObjectId, ref: 'Topic'}],
+    //  joins Review schema
 	reviews: [{ type: Schema.Types.ObjectId, ref: 'Review'}],
     date: { type: Date, default: Date.now }
 });
