@@ -13,7 +13,7 @@ const topicSchema = new Schema({
     value: { type: String, required: true },
     genre: { type: Array },
     age_range: { type: Array },
-    img: { type: String },
+    image: { type: String },
     description: { type: String },
     reviews: [{type: Schema.Types.ObjectId, ref: 'Review'}],
     date: { type: Date, default: Date.now }
