@@ -1,7 +1,7 @@
 const router = require("express").Router();
-const Topic = require("./topic");
-const Review = require("./review");
-const User = require("./user");
+const Topic = require("./topics");
+const Review = require("./reviews");
+const User = require("./users");
 
 router.use("/topics", Topic);
 router.use("/reviews", Review);

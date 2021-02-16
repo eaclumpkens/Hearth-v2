@@ -14,6 +14,13 @@ module.exports = {
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
     },
+    findByCategory: function(req, res) {
+        db.Topic
+          .find({ category: req.params.category })
+          .sort({ date: -1 })
+          .then(dbModel => res.json(dbModel))
+          .catch(err => res.status(422).json(err));
+      },
     create: function(req, res) {
       db.Topic
         .create(req.body)
