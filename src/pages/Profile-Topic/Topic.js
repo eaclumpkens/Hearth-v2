@@ -62,7 +62,7 @@ function Topic() {
                 <Col md={24} >
                     <img
                         className="page-image"
-                        src={topicObject.Image || "./images/no-image.png"}
+                        src={topicObject.img || "./images/no-image.png"}
                         alt="icon of topic poster"
                     />
                 </Col>

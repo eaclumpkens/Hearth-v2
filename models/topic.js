@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const topicSchema = new Schema({
+    _id: Schema.Types.ObjectId,
     // title of topic
     topic: { type: String, required: true },
     // book, film, tv show, etc.
@@ -10,10 +11,11 @@ const topicSchema = new Schema({
     label: { type: String, required: true },
     // value needed for react suite (same as title)
     value: { type: String, required: true },
-    genre: { type: String },
-    age_range: { type: String },
+    genre: { type: Array },
+    age_range: { type: Array },
     img: { type: String },
     description: { type: String },
+    reviews: [{type: Schema.Types.ObjectId, ref: 'Review'}],
     date: { type: Date, default: Date.now }
 });
 
