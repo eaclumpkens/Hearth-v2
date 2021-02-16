@@ -25,7 +25,7 @@
         genre: ["Drama", "Horror", "Mystery", "Thriller"],
         age_range: "Adult",
         img: "/images/topEntertainment/hill-house.jpg",
-        description: "TThe Haunting of Hill House book follows four strangers, all of whom come to Hill House, long-rumored to be haunted, under the guidance of Dr. Montague, who is hoping to scientifically prove the existence of the supernatural. Over the course of the summer, the house proves itself to be extremely haunted."
+        description: "The Haunting of Hill House book follows four strangers, all of whom come to Hill House, long-rumored to be haunted, under the guidance of Dr. Montague, who is hoping to scientifically prove the existence of the supernatural. Over the course of the summer, the house proves itself to be extremely haunted."
     },{
         topic: "The Hobbit",
         label: "the hobbit",

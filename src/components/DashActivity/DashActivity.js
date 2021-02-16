@@ -42,9 +42,9 @@ function DashActivity() {
                   <img
                     id="dash-image"
                     src={data.img || "/images/no-image.png"}
-                    alt={data.title}
+                    alt={data.topic}
                   />
-                  <p id="topic-title">{data.title}</p>
+                  <p id="topic-title">{data.topic}</p>
                 </Button>
             );
 

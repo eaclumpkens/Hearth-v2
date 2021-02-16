@@ -22,7 +22,7 @@ export default function Topics() {
 
   return (
     <div className="browse-container  animate__animated animate__fadeIn">
-      <h3 className="browse-title">browse by topic</h3>
+      <h3 className="browse-title">browse topics</h3>
       <Row className="topic-links">
         {allTopics.map(topic => {
           return (
