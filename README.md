@@ -137,7 +137,6 @@ About:
 
 - [Elisabeth Clumpkens](https://github.com/eaclumpkens "Visit Elisabeth's GitHub")
 - [Dylan Frank](https://github.com/drfrank22 "Visit Dylan's GitHub")
-- [Joseph Gill](https://github.com/jaguar6105 "Visit Joseph's GitHub")
 - [Meaghan Neylon](https://github.com/neylonmc "Visit Meaghan's GitHub")
 
 ## License
