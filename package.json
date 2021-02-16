@@ -23,6 +23,7 @@
     "jsonwebtoken": "^8.5.1",
     "mongo": "^0.1.0",
     "mongoose": "^5.11.16",
+    "node": "^15.8.0",
     "passport": "^0.4.1",
     "path": "^0.12.7",
     "react": "^17.0.1",
