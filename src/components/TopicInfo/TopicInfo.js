@@ -6,26 +6,26 @@ import "./TopicInfo.css"
 
 function TopicInfo(props) {
 
-    const topic = props.topic;
-    console.log(topic);
+    const category = props.category;
+    console.log(category);
 
-    if (topic === "Books") {
+    if (category === "Books") {
         return (
             <Row id="info-text">
-                <p><strong>Ages: </strong>{props.ageRange}</p>
+                <p><strong>Ages: </strong>{props.age_range}</p>
                 <p>{props.description}</p>
             </Row>
         )
-    } else if (topic === "Music") {
+    } else if (category === "Music") {
         return (
             <Row id="info-text">
                 <p>{props.description}</p>
             </Row>
         )
-    } else if (topic === "Film" || topic === "Television") {
+    } else if (category === "Film" || category === "Television") {
         return (
             <Row id="info-text">
-                <p><strong>Ages: </strong>{props.ageRange.join(", ")}</p>
+                <p><strong>Ages: </strong>{props.age_range.join(", ")}</p>
                 <p><strong>Stream: </strong> Netflix, Amazon Prime, HULU</p>
                 <p>{props.description}</p>
             </Row>

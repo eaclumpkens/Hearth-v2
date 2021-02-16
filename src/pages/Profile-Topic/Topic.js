@@ -19,6 +19,7 @@ function Topic() {
     let { id } = useParams();
 
     const [commentsObject, setData] = useState([]);
+
     const [topicObject, setTopic] = useState({
         category: []
 
@@ -34,7 +35,11 @@ function Topic() {
 
     function loadTopic(id) {
 
-        
+        API.getTopic(id)
+            .then(res => 
+                setTopic(res.data)
+            )
+            .catch(err => console.log(err));
 
     }
 
@@ -70,10 +75,10 @@ function Topic() {
             <Row>
                 <Col md={24}>
                     <Row>
-                        <h3 id="sub-header" className="page-title">{topicObject.title}</h3>
+                        <h3 id="sub-header" className="page-title">{topicObject.topic}</h3>
                     </Row>
                     <Row>
-                        <h4 className="topic-head">{topicObject.type} | { topicObject.category.join(", ") }</h4>
+                        <h4 className="topic-head">{topicObject.category} | { topicObject.genre.join(", ") }</h4>
                     </Row>
                 </Col>
             </Row>
@@ -88,9 +93,9 @@ function Topic() {
                     defaultExpanded
                 >
                     <TopicInfo
-                        topic={topicObject.type}
-                        ageRange={topicObject.ageRange}
-                        genre={topicObject.category.join(", ")}
+                        category={topicObject.category}
+                        age_range={topicObject.age_range}
+                        genre={topicObject.genre.join(", ")}
                         description={topicObject.description}
                     />
                 </Panel>
