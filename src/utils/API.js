@@ -24,7 +24,7 @@ export default {
   deleteUser: function(id) {
     return axios.delete("/api/users/" + id);
   },
-  saveUser: function(topicData) {
+  saveUser: function(userData) {
     return axios.post("/api/users", userData);
   },
   // Review API
@@ -37,7 +37,7 @@ export default {
   deleteReview: function(id) {
     return axios.delete("/api/reviews/" + id);
   },
-  saveReview: function(topicData) {
+  saveReview: function(reviewData) {
     return axios.post("/api/reviews", reviewData);
   }
 };
