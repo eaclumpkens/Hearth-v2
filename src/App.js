@@ -78,7 +78,7 @@ class App extends Component {
               <Route path="/post" component={NewPost} />
               <Route exact path="/dashboard" component={Dashboard} />
               <Route exact path="/profile" component={Profile} />
-              <Route exact path="/topic/:topic" component={Topic} />
+              <Route exact path="/topic/:id" component={Topic} />
               <Route exact path="/settings" component={Settings} />
               <Route exact path="/about" component={About} />
               <Route path="*" component={NoMatch} />

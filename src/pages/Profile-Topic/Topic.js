@@ -16,7 +16,7 @@ import FollowButton from "../../components/FollowButton/FollowButton";
 
 function Topic() {
 
-    let { topic } = useParams();
+    let { id } = useParams();
 
     const [commentsObject, setData] = useState([]);
     const [topicObject, setTopic] = useState({
@@ -25,23 +25,32 @@ function Topic() {
     });
 
     useEffect(() => {
-        console.log(topic)
-        loadActivities(topic);
+        console.log(id)
+        // loadActivities(topic);
+
+        loadTopic(id);
+        
     },[]);
 
-    function loadActivities(topic) {
-        API.getActivitybyTitle(topic)
-            .then((res) => {
-                setTopic(res.data[0])
-                console.log(topicObject);
-                API.getCommentsByActivity(res.data[0]._id)
-                    .then((res) => {
-                        setData(res.data);
-                    }).catch(err => err)
-            }).catch(err => err)
+    function loadTopic(id) {
+
+        
+
     }
 
-    console.log(topicObject);
+    // function loadActivities(topic) {
+    //     API.getActivitybyTitle(topic)
+    //         .then((res) => {
+    //             setTopic(res.data[0])
+    //             console.log(topicObject);
+    //             API.getCommentsByActivity(res.data[0]._id)
+    //                 .then((res) => {
+    //                     setData(res.data);
+    //                 }).catch(err => err)
+    //         }).catch(err => err)
+    // }
+
+
     return (
         <div className="page-container animate__animated animate__fadeIn">
             <Row className="header-container">
