@@ -12,22 +12,22 @@ import API from "../../utils/API";
 import Streaming from "../../components/Streaming/Streaming";
 import SimilarUsers from "../../components/SimilarUsers/SimilarUsers";
 import DashActivity from "../../components/DashActivity/DashActivity";
+import Entertainment from "../../utils/TopEntertainment";
 
 function Dashboard() {
   const [userState, setUser] = useState([]);
 
-  useEffect(() => {
-    setUser(JSON.parse(window.sessionStorage.getItem("myUserEntity")));
+  // useEffect(() => {
+  //   setUser(JSON.parse(window.sessionStorage.getItem("myUserEntity")));
 
-    API.getUser(userState.Id)
-      .then((res) => {
-        console.log(res.data);
-      })
-      .catch((err) => err);    
-  }, [userState.Id]);
+  //   API.getUser(userState.Id)
+  //     .then((res) => {
+  //       console.log(res.data);
+  //     })
+  //     .catch((err) => err);    
+  // }, [userState.Id]);
 
 
-  
     return (
       <div className="dashboard-container animate__animated animate__fadeIn">
         {/* INITIAL BLOCKS */}

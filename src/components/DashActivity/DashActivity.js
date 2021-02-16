@@ -11,22 +11,22 @@ import API from "../../utils/API";
 import Entertainment from "../../utils/TopEntertainment";
 
 function DashActivity() {
-    let { topic } = useParams();
+    // let { topic } = useParams();
 
-    const [formObject, setFormObject] = useState([]);
+    // const [formObject, setFormObject] = useState([]);
 
-    function loadActivities(topic) {
-        API.getActivities(topic)
-        .then(res => {
-            setFormObject(res.data);
-        })
-        .catch(err => console.log(err));
+    // function loadActivities(topic) {
+    //     API.getActivities(topic)
+    //     .then(res => {
+    //         setFormObject(res.data);
+    //     })
+    //     .catch(err => console.log(err));
 
-    }
+    // }
 
-    useEffect(() => {
-        loadActivities(topic);
-    }, [topic])
+    // useEffect(() => {
+    //     loadActivities(topic);
+    // }, [topic])
 
     // recent activity from topics user follows
     return(
