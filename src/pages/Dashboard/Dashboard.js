@@ -17,15 +17,15 @@ import Entertainment from "../../utils/TopEntertainment";
 function Dashboard() {
   const [userState, setUser] = useState([]);
 
-  // useEffect(() => {
-  //   setUser(JSON.parse(window.sessionStorage.getItem("myUserEntity")));
+  useEffect(() => {
+    setUser(JSON.parse(window.sessionStorage.getItem("myUserEntity")));
 
-  //   API.getUser(userState.Id)
-  //     .then((res) => {
-  //       console.log(res.data);
-  //     })
-  //     .catch((err) => err);    
-  // }, [userState.Id]);
+    API.getUser(userState.Id)
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((err) => err);    
+  }, [userState.Id]);
 
 
     return (
