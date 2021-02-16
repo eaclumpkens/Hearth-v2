@@ -29,11 +29,11 @@ function Login() {
   //Store the entity object in sessionStorage where it will be accessible from all pages of your site.
     sessionStorage.setItem('myUserEntity',JSON.stringify(myUserEntity));
 
-    API.saveUser(newUser)
-      .then((res) => {
-        console.log(res)
-        console.log("user saved")
-      }).catch(err => err)
+    // API.saveUser(newUser)
+    //   .then((res) => {
+    //     console.log(res)
+    //     console.log("user saved")
+    //   }).catch(err => err)
     window.location.replace("http://localhost:3000/dashboard");
 
   };
