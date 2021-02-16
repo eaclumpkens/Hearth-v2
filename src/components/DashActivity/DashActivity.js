@@ -11,7 +11,6 @@ import API from "../../utils/API";
 import Entertainment from "../../utils/TopEntertainment";
 
 function DashActivity() {
-    // let { topic } = useParams();
 
     // const [formObject, setFormObject] = useState([]);
 
@@ -29,6 +28,19 @@ function DashActivity() {
     // }, [topic])
 
     // recent activity from topics user follows
+
+    const [ dashObject, setDash ] = useState([]);
+
+    useEffect(() => {
+
+      API.getTopics()
+      .then(res => {
+        console.log(res)
+      }).catch(err => err)
+
+    }, []);
+
+
     return(
         <div className="animate__animated animate__fadeIn" >
         <ButtonGroup className="dash-container">
