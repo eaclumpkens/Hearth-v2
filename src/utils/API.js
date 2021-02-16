@@ -1,8 +1,7 @@
 import axios from "axios";
 
 export default {
-
-  getTopics: function {
+  getTopics: function() {
     return axios.get("/api/topics");
   },
   getTopic: function(id) {
@@ -14,5 +13,4 @@ export default {
   saveTopic: function(topicData) {
     return axios.post("/api/topics", topicData);
   }
-
-}
+};
