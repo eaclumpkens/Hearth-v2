@@ -2,17 +2,17 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const topicSchema = new Schema({
-  title: { type: String, required: true },
-  label: { type: String, required: true },
-  value: { type: String, required: true },
-  topic: { type: String, required: true },
-  genre: { type: String, required: true },
-  age_range: { type: String, required: true },
-  img: { type: String, required: true },
-  ext: { type: String, required: true },
-  local_ext: { type: String, required: true },
-  description: { type: String, required: true },
-  date: { type: Date, default: Date.now }
+    // title of topic
+    topic: { type: String, required: true },
+    // label for search menus
+    label: { type: String, required: true },
+    // value needed for react suite (same as title)
+    value: { type: String, required: true },
+    genre: { type: String },
+    age_range: { type: String },
+    img: { type: String },
+    description: { type: String },
+    date: { type: Date, default: Date.now }
 });
 
 const Topic = mongoose.model("Topic", topicSchema);
