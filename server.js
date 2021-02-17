@@ -1,6 +1,8 @@
 const express = require("express");
-
+const bodyParser = require("body-parser");
+const morgan = require("morgan");
 const mongoose = require("mongoose");
+const passport = require("./passport");
 const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -12,8 +14,6 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
-// Add routes, both API and view
-app.use(routes);
 
 // Connect to the Mongo DB
 mongoose.connect(
@@ -25,6 +25,14 @@ mongoose.connect(
     useFindAndModify: false
   }
 );
+
+// Passport
+app.use(passport.initialize());
+app.use(passport.session()); // calls the deserializeUser
+
+// Add routes, both API and view
+app.use(routes);
+app.use("/user", user);
 
 // Start the API server
 app.listen(PORT, function() {
