@@ -2,7 +2,14 @@
   "name": "hearth-v2",
   "version": "0.1.0",
   "main": "server.js",
-  "proxy": "http://localhost:3001/",
+  "proxy": {
+    "/api": {
+      "target": "http://localhost:3001"
+    },
+    "/assets": {
+      "target": "http://localhost:3001"
+    }
+  },
   "private": true,
   "dependencies": {
     "axios": "^0.21.1",
