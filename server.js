@@ -1,8 +1,8 @@
 const express = require("express");
-const bodyParser = require("body-parser");
-const morgan = require("morgan");
+// const bodyParser = require("body-parser");
+// const morgan = require("morgan");
 const mongoose = require("mongoose");
-const passport = require("./passport");
+// const passport = require("./passport");
 const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -27,12 +27,12 @@ mongoose.connect(
 );
 
 // Passport
-app.use(passport.initialize());
-app.use(passport.session()); // calls the deserializeUser
+// app.use(passport.initialize());
+// app.use(passport.session()); // calls the deserializeUser
 
 // Add routes, both API and view
 app.use(routes);
-app.use("/user", user);
+// app.use("/user", user);
 
 // Start the API server
 app.listen(PORT, function() {

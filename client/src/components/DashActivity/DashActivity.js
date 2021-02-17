@@ -32,19 +32,32 @@ function DashActivity() {
     const [ dashObject, setDash ] = useState([]);
 
     useEffect(() => {
+      loadTopics()
+    }, [])
 
+    function loadTopics() {
       API.getTopics()
-      .then(res => {
-        console.log(res.data)
-      }).catch(err => err)
+        .then(res => 
+          setDash(res.data)
+        )
+        .catch(err => console.log(err));
+    };
 
-    }, []);
+    // useEffect(() => {
+
+    //   API.getTopics()
+    //   .then(res => {
+    //     console.log(res.data)
+    //     setDash(res.data);
+    //   }).catch(err => err)
+
+    // }, [dashObject]);
 
 
     return(
         <div className="animate__animated animate__fadeIn" >
         <ButtonGroup className="dash-container">
-          {Entertainment.map(data => {
+          {dashObject.map(data => {
             return (
                 <Button
                   id="dash-button"
