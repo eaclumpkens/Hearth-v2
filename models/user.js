@@ -5,6 +5,7 @@ mongoose.promise = Promise;
 //const activity = require("activity.js");
 
 const usersSchema = new Schema({
+    _id: Schema.Types.ObjectId,
     name: { type: String, required: true },
     username: { type: String, unique: false, required: false },
 	password: { type: String, unique: false, required: false },
