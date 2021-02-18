@@ -12,59 +12,29 @@ function Topic() {
 
     // const [commentsObject, setData] = useState([]);
     const [topicObject, setTopic] = useState({
-        category: []
+        category: [],
+        genre: []
 
     });
 
     useEffect(() => {
         console.log(id)
-        loadTopics(id);
+
     },[]);
 
-    function loadTopics(id) {
-        API.getActivitybyTitle(id)
-            .then((res) => {
-                setTopic(res.data[0])
-                console.log(topicObject);
-                // API.getCommentsByActivity(res.data[0]._id)
-                //     .then((res) => {
-                //         setData(res.data);
-                //     }).catch(err => err)
-            }).catch(err => err)
-    }
+    // function loadTopics(id) {
+    //     API.getTopic(id)
+    //         .then((res) => {
+    //             setTopic(res.data[0])
+    //             console.log(topicObject);
+    //             // API.getCommentsByActivity(res.data[0]._id)
+    //             //     .then((res) => {
+    //             //         setData(res.data);
+    //             //     }).catch(err => err)
+    //         }).catch(err => err)
+    // }
 
-    console.log(topicObject);
-
-  // const [commentsObject, setData] = useState([]);
-
-  // const [topicObject, setTopic] = useState({
-  //   category: [],
-  // });
-
-  // useEffect(() => {
-  //   console.log(id);
-  //   // loadActivities(topic);
-
-  //   loadTopic(id);
-  // }, []);
-
-  // function loadTopic(id) {
-  //   API.getTopic(id)
-  //     .then((res) => setTopic(res.data))
-  //     .catch((err) => console.log(err));
-  // }
-
-  // function loadActivities(topic) {
-  //     API.getActivitybyTitle(topic)
-  //         .then((res) => {
-  //             setTopic(res.data[0])
-  //             console.log(topicObject);
-  //             API.getCommentsByActivity(res.data[0]._id)
-  //                 .then((res) => {
-  //                     setData(res.data);
-  //                 }).catch(err => err)
-  //         }).catch(err => err)
-  // }
+    // console.log(topicObject);
 
   return (
     <div className="page-container animate__animated animate__fadeIn">
@@ -100,10 +70,10 @@ function Topic() {
       <PanelGroup className="panel-container" accordion>
         <Panel id="panel" className="about-panel" defaultExpanded>
           <TopicInfo
-            category={topicObject.category}
-            age_range={topicObject.age_range}
-            genre={topicObject.genre.join(", ")}
-            description={topicObject.description}
+            // category={topicObject.category}
+            // age_range={topicObject.age_range}
+            // genre={topicObject.genre.join(", ")}
+            // description={topicObject.description}
           />
         </Panel>
         <Panel
@@ -117,6 +87,6 @@ function Topic() {
       </PanelGroup>
     </div>
   );
-}
+};
 
 export default Topic;

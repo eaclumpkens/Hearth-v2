@@ -6,7 +6,7 @@
 
 Designed with community in mind, hearth allows users to rate, review and find something worth reading, listening or watching almost instantly.
 
-[Check out the deployed site here](https://hearthcommunity.netlify.app)
+[Check out the deployed site here](hearthcommunity.herokuapp.com/)
 
 ## Table of Contents
 
