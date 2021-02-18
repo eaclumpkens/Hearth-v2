@@ -34,7 +34,7 @@ function Login() {
         console.log(res)
         console.log("user saved")
       }).catch(err => err)
-    window.location.replace("http://localhost:3000/dashboard");
+    window.location.replace("https://hearthcommunity.herokuapp.com/dashboard || http://localhost:3000/dashboard");
 
   };
   
