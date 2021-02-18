@@ -7,17 +7,13 @@ router.route("/")
     // .post(topicsController.create);
 
 // Matches with "/api/topics/:id"
-router
-    .route("/:id")
+router.route("/:id")
     .get(topicsController.findById)
     .put(topicsController.update)
     .delete(topicsController.remove);
 
 // Matches with "/api/topics/:category"
-router
-    .route("/:category")
-        .get(topicsController.findByCategory)
-        .put(topicsController.update)
-        .delete(topicsController.remove);    
+router.route("/:category")
+    .get(topicsController.findByCategory);
 
 module.exports = router;

@@ -34,7 +34,7 @@ export default function Topics() {
         <Route exact path={path}>
           <div className="empty-container" />
         </Route>
-        <Route exact path={`${path}/:topic`}>
+        <Route exact path={`${path}/:category`}>
           <Topic />
         </Route>
       </Switch>
@@ -43,17 +43,18 @@ export default function Topics() {
 }
 
 function Topic() {
-  let { topic } = useParams();
+  let { category } = useParams();
 
   const [formObject, setFormObject] = useState([]);
 
   useEffect(() => {
-    loadActivities(topic);
-  }, [topic]);
+    loadActivities(category);
+  }, [category]);
 
-  function loadActivities(topic) {
-    API.getTopic(topic)
+  function loadActivities(category) {
+    API.getTopicsByCategory(category)
       .then((res) => {
+        console.log(res);
         setFormObject(res.data);
       })
       .catch((err) => console.log(err));
@@ -66,15 +67,15 @@ function Topic() {
           return (
             <Button
               id="results-button"
-              href={`/topic/${data.local_ext}`}
+              href={`/topic/${data._id}`}
               bordered
             >
               <img
                 id="topic-image"
                 src={data.Image || "/images/no-image.png"}
-                alt={data.title}
+                alt={data.topic}
               />
-              <p id="topic-title">{data.title}</p>
+              <p id="topic-title">{data.topic}</p>
             </Button>
           );
         })}

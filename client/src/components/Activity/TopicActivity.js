@@ -12,26 +12,24 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 function TopicActivity() {
 
-    let { topic } = useParams();
+    let { id } = useParams();
 
-    const [topicState, setState] = useState([]);
-
-    const placeholder = [
-
-    ]
+    const [topicState, setTopic] = useState([]);
+    const [ reviewState, setReviews ] = useState([]);
 
     useEffect(() => {
-        // API.getCommentsByActivity(topic).then(res => {
-        //     for (let i = 0; i < res.data.length; i++) {
-        //         topicState.push(res.data[i]);
-        //         console.log(topicState);
-        //     }
-        // });
+        API.getTopic(id)
+            .then(res => {
+                console.log(res.data.topic)
+                setTopic(res.data)
+
+                API.getReviewsByTopic(res.data.topic)
+            }).catch(err => err)
     }, []);
 
     return (
         <Row className="activity-container">
-            { topicState.map(data => {
+            {/* { topicState.map(data => {
                 return (
                     <Col
                         id="activity-card"
@@ -55,7 +53,7 @@ function TopicActivity() {
                     </Col>
                 )
 
-            })}
+            })} */}
 
         </Row>
     )

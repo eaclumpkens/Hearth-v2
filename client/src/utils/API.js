@@ -8,6 +8,9 @@ export default {
   getTopic: function(id) {
     return axios.get("/api/topics/" + id);
   },
+  getTopicsByCategory: function(category) {
+    return axios.get("/api/topics/" + category);
+  },
   deleteTopic: function(id) {
     return axios.delete("/api/topics/" + id);
   },
@@ -33,6 +36,9 @@ export default {
   },
   getReview: function(id) {
     return axios.get("/api/reviews/" + id);
+  },
+  getReviewsByTopic: function(topic) {
+    return axios.get("/api/reviews/" + topic)
   },
   deleteReview: function(id) {
     return axios.delete("/api/reviews/" + id);

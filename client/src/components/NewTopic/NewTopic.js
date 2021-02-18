@@ -17,8 +17,8 @@ import Ages from "../../utils/AgeRange";
 import API from "../../utils/API";
 
 function NewRec() {
-  const [titleState, setTitle] = useState("");
-  const [typeState, setType] = useState("");
+  const [topicState, setTopic] = useState("");
+  const [categoryState, setCategory] = useState("");
 
   // const [ topicState, setTopic ] = useState({});
 
@@ -27,15 +27,15 @@ function NewRec() {
   function handleFormSubmit(event) {
     event.preventDefault();
     let form = {
-      title: titleState,
-      topic: typeState,
+      topic: topicState,
+      category: categoryState,
     };
     console.log(form);
     API.saveTopic(form).then((res) => {});
   }
 
   return (
-    <div className="topic-container   animate__animated animate__fadeIn">
+    <div className="topic-container animate__animated animate__fadeIn">
       <p className="subheader">
         create a new topic and get the conversation started
       </p>
@@ -48,7 +48,7 @@ function NewRec() {
             name="name"
             placeholder="topic title"
             onChange={function (value) {
-              setTitle(value);
+              setTopic(value);
             }}
           />
         </FormGroup>
@@ -57,11 +57,11 @@ function NewRec() {
           <Col>
             <FormGroup id="mini-picker">
               <SelectPicker
-                data={Topic}
+                data={ Topic }
                 defaultValue=""
                 placeholder="type"
                 onSelect={function (value, item) {
-                  setType(item.topic);
+                  setCategory(item.topic);
                 }}
                 block
               />

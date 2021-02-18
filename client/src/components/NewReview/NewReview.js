@@ -17,14 +17,14 @@ import API from "../../utils/API";
 const NewReview = () => {
   //  States
   const [topicState, setTopic] = useState("");
-  const [ authorState, setAuthor ] = useState("");
+  const [idState, setId] = useState("");
+  const [authorState, setAuthor] = useState("");
   const [textState, setText] = useState("");
   const [simState, setSim] = useState([]);
   const [rateState, setRate] = useState(0);
 
   //  Final Review State
   const [reviewState, setReview] = useState({});
-
   const [activityState, setActivity] = useState([]);
 
   useEffect(() => {
@@ -41,13 +41,16 @@ const NewReview = () => {
 
   function handleFormSubmit(event) {
     event.preventDefault();
+
     let form = {
       topic: topicState,
+      topic_id: idState,
       author: authorState.Name,
       review: textState,
       rating: rateState,
       similar_topics: simState,
     };
+
     console.log(form);
     API.saveReview(form);
   }
@@ -111,6 +114,15 @@ const NewReview = () => {
               className="review-rating"
               onChange={function (value) {
                 setRate(value);
+                
+                const topicObj = activityState.filter(item => {
+                  return item.topic === topicState;
+                })
+            
+                const topicId = topicObj[0]._id;
+                console.log(topicId)
+            
+                setId(topicId);
               }}
               defaultValue={3.5}
               allowHalf

@@ -10,54 +10,39 @@ mongoose.connect(
 
 const reviewSeed = [
     {
-        // Dune
-        topic: ObjectId("602c1a41db488b73ad044fe8"),
-        // Nina Anderson
-        author: ObjectId("602c27ad2d8ee578e558a42a"),
+        topic: "Dune",
+        author: "Nina Anderson",
         review: "Awesome from start to finish",
         rating: 5,
-        // Star Wars, The Mandalorian
-        similar_topics: [ObjectId("602c1a41db488b73ad044fed"), ObjectId("602c1a41db488b73ad044ff4")]
+        similar_topics: ["Star Wars", "The Mandalorian"]
     },
     {
-        // Dune
-        topic: ObjectId("602c1a41db488b73ad044fe8"),
-        // Roger Graham
-        author: ObjectId("602c27ad2d8ee578e558a42b"),
+        topic: "Dune",
+        author: "Roger Graham",
         review: "Really entertaining",
         rating: 4,
-        // Star Wars, The Mandalorian
-        similar_topics: [ObjectId("602c1a41db488b73ad044fed"), ObjectId("602c1a41db488b73ad044ff4")]
+        similar_topics: ["Star Wars", "The Mandalorian", "Rogue One"]
     },
     {
-        // Dune
-        topic: ObjectId("602c1a41db488b73ad044fe8"),
-        // Jacob Smith
-        author: ObjectId("602c27ad2d8ee578e558a42c"),
+        topic: "Dune",
+        author: "Jacob Smith",
         review: "A bit slow, but got there in the end",
         rating: 3,
-        // Star Wars, The Mandalorian
-        similar_topics: [ObjectId("602c1a41db488b73ad044fed"), ObjectId("602c1a41db488b73ad044ff4")]
+        similar_topics: ["Star Wars", "The Mandalorian"]
     },
     {
-        // Dune
-        topic: ObjectId("602c1a41db488b73ad044fe8"),
-        // Niilo Keto
-        author: ObjectId("602c27ad2d8ee578e558a42d"),
+        topic: "Dune",
+        author: "Niilo Keto",
         review: "Not worth it",
         rating: 2,
-        // Star Wars, The Mandalorian
-        similar_topics: [ObjectId("602c1a41db488b73ad044fed"), ObjectId("602c1a41db488b73ad044ff4")]
+        similar_topics: ["Star Wars", "The Mandalorian"]
     },
     {
-        // Dune
-        topic: ObjectId("602c1a41db488b73ad044fe8"),
-        // Ruby Morris
-        author: ObjectId("602c27ad2d8ee578e558a42e"),
+        topic: "Dune",
+        author: "Ruby Morris",
         review: "Nope",
         rating: 1,
-        // Star Wars, The Mandalorian
-        similar_topics: [ObjectId("602c1a41db488b73ad044fed"), ObjectId("602c1a41db488b73ad044ff4")]
+        similar_topics: ["Star Wars", "The Mandalorian"]
     }
 ];
 

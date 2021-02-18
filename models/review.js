@@ -4,6 +4,7 @@ const Topic = require("./topic.js")
 
 const reviewSchema = new Schema({
     topic: { type: String },
+    topic_id: { type: String },
     author: { type: String },
     review: { type: String },
     rating: { type: Number, required: true },
