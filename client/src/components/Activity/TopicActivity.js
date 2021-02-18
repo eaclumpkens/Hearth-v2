@@ -17,46 +17,53 @@ function TopicActivity() {
     const [topicState, setTopic] = useState([]);
     const [ reviewState, setReviews ] = useState([]);
 
+    const [ allState, setAll ] = useState([]);
+
     useEffect(() => {
         API.getTopic(id)
             .then(res => {
                 console.log(res.data.topic)
                 setTopic(res.data)
 
-                API.getReviewsByTopicId(res.data._id)
+                API.getReviews()
                     .then(res => {
-                        console.log(res);
+                        console.log(res.data)
+                        setAll(res.data)
                     })
+
+                
             }).catch(err => err)
     }, []);
 
     return (
         <Row className="activity-container">
-            {/* { topicState.map(data => {
-                return (
-                    <Col
-                        id="activity-card"
-                        md={24}
-                        block
-                    >
-                        <Row>
-                            <Col md={20}>
-                                <h2 id="card-title">{data.title}</h2>
-                            </Col>
-                            <Col md={4}>
-                                <h3 id="card-rating">Score: {data.rating} <FontAwesomeIcon icon={faStar} /></h3>
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col md={24}>
-                                <p id="card-review">{data.review}</p>
-                            </Col>
-                        </Row>
+            { allState.map(data => {
 
-                    </Col>
-                )
-
-            })} */}
+                if (data.topic_id === id ) {
+                    return (
+                        <Col
+                            id="activity-card"
+                            md={24}
+                            block
+                        >
+                            <Row>
+                                <Col md={20}>
+                                    <h2 id="card-title">{data.title}</h2>
+                                </Col>
+                                <Col md={4}>
+                                    <h3 id="card-rating">Score: {data.rating} <FontAwesomeIcon icon={faStar} /></h3>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col md={24}>
+                                    <p id="card-review">{data.review}</p>
+                                </Col>
+                            </Row>
+    
+                        </Col>
+                    )
+                }
+            })}
 
         </Row>
     )
