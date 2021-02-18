@@ -12,7 +12,7 @@ function TopicInfo(props) {
     if (category === "Books") {
         return (
             <Row id="info-text">
-                <p><strong>Ages: </strong>{props.age_range}</p>
+                <p><strong>Ages: </strong>{props.age_range.join(", ")}</p>
                 <p>{props.description}</p>
             </Row>
         )
