@@ -15,7 +15,7 @@ function MediaGrid() {
     return(
         <Row className="media-container">
             { shortEnt.map(data => {
-                console.log(shortEnt)
+                // console.log(shortEnt)
                 return(
                     <Col 
                     md={6} 

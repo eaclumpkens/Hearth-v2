@@ -36,25 +36,26 @@ function DashActivity() {
       API.getTopics()
       .then(res => {
         console.log(res.data)
+        setDash(res.data)
       }).catch(err => err)
 
-    }, []);
+    }, [dashObject] );
 
 
     return(
         <div className="animate__animated animate__fadeIn" >
         <ButtonGroup className="dash-container">
-          {Entertainment.map(data => {
+          {dashObject.map(data => {
             return (
                 <Button
                   id="dash-button"
-                  href={ data.local_ext }
+                  href={ `/topic/${data._id}` }
                   bordered
                 >
                   <img
                     id="dash-image"
-                    src={data.img || "/images/no-image.png"}
-                    alt={data.topic}
+                    src={ data.image || "/images/no-image.png" }
+                    alt={ data.topic }
                   />
                   <p id="topic-title">{data.topic}</p>
                 </Button>

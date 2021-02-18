@@ -4,7 +4,7 @@ const topicsController = require("../../controllers/topicsController");
 // Matches with "/api/topics"
 router.route("/")
     .get(topicsController.findAll)
-    .post(topicsController.create);
+    // .post(topicsController.create);
 
 // Matches with "/api/topics/:id"
 router

@@ -4,7 +4,7 @@ module.exports = {
     findAll: function(req, res) {
         db.Topic
             .find(req.query)
-            .short({date: -1})
+            .sort({date: -1})
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
