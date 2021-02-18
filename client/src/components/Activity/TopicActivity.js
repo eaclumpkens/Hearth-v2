@@ -40,6 +40,9 @@ function TopicActivity() {
             { allState.map(data => {
 
                 if (data.topic_id === id ) {
+
+                    console.log(data);
+
                     return (
                         <Col
                             id="activity-card"
@@ -48,7 +51,7 @@ function TopicActivity() {
                         >
                             <Row>
                                 <Col md={20}>
-                                    <h2 id="card-title">{data.title}</h2>
+                                    <h2 id="card-title">{data.author}</h2>
                                 </Col>
                                 <Col md={4}>
                                     <h3 id="card-rating">Score: {data.rating} <FontAwesomeIcon icon={faStar} /></h3>
@@ -58,6 +61,19 @@ function TopicActivity() {
                                 <Col md={24}>
                                     <p id="card-review">{data.review}</p>
                                 </Col>
+                            </Row>
+                            <Row>
+                                { data.similar_topics.map(topic => {
+                                    console.log(topic)
+
+                                    return(
+                                        <Col md={4}>
+                                        <p id="similar-topic">{topic}</p>
+                                    </Col>
+                                    )
+
+
+                                })}
                             </Row>
     
                         </Col>
