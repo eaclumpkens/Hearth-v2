@@ -6,7 +6,7 @@
 
 Designed with community in mind, hearth allows users to rate, review and find something worth reading, listening or watching almost instantly.
 
-[Check out the deployed site here](hearthcommunity.herokuapp.com/)
+[Check out the deployed site here](https://hearthcommunity.herokuapp.com/)
 
 ## Table of Contents
 
@@ -108,7 +108,7 @@ Allowing users to create an account through hearth. Easier way to save preferenc
 
 Repo: https://github.com/neylonmc/Hearth
 
-Deployed App: https://hearthcommunity.netlify.app
+Deployed App: https://hearthcommunity.herokuapp.com/
 
 Login Page:
 

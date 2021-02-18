@@ -10,7 +10,7 @@ function Logout() {
     console.log('Logout made successfully');
     // alert('Logout made successfully ✌');
     // window.location.replace("https://hearthcommunity.netlify.app/" || "http://localhost:3000/")
-    window.location.replace("http://localhost:3000/")
+    window.location.replace("https://hearthcommunity.herokuapp.com/" || "http://localhost:3000/");
   };
 
   return (
