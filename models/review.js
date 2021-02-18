@@ -1,13 +1,13 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
+const Topic = require("./topic.js")
 
 const reviewSchema = new Schema({
-    _id: Schema.Types.ObjectId,
-    topic: { type: Schema.Types.ObjectId, ref: 'Topic'},
-    author: { type: Schema.Types.ObjectId, ref: 'User'},
+    topic: { type: String },
+    author: { type: String },
     review: { type: String },
     rating: { type: Number, required: true },
-    similar_topics: [{ type: Schema.Types.ObjectId, ref: 'Topic'}],
+    similar_topics: [{ type: String }],
     date: { type: Date, default: Date.now }
 });
 

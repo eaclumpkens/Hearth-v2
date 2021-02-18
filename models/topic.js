@@ -2,7 +2,6 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const topicSchema = new Schema({
-    _id: Schema.Types.ObjectId,
     // title of topic
     topic: { type: String, required: true },
     // book, film, tv show, etc.
@@ -16,7 +15,7 @@ const topicSchema = new Schema({
     image: { type: String },
     description: { type: String },
     //  joins Review schema
-    reviews: [{type: Schema.Types.ObjectId, ref: 'Review'}],
+    reviews: [{ type: String }],
     date: { type: Date, default: Date.now }
 });
 

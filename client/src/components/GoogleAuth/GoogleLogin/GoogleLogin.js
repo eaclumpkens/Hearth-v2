@@ -18,8 +18,8 @@ function Login() {
 
     const newUser = {
       name: res.profileObj.name,
-      image: res.profileObj.imageUrl,
-      _id: res.profileObj.googleId
+      username: res.profileObj.name,
+      image: res.profileObj.imageUrl
     };
     var myUserEntity = {};
       myUserEntity.Id = res.profileObj.googleId;
@@ -28,12 +28,15 @@ function Login() {
   
   //Store the entity object in sessionStorage where it will be accessible from all pages of your site.
     sessionStorage.setItem('myUserEntity',JSON.stringify(myUserEntity));
+    console.log(myUserEntity)
 
-    API.saveUser(newUser)
-      .then((res) => {
-        console.log(res)
-        console.log("user saved")
-      }).catch(err => err)
+    // API.saveUser(newUser)
+    //   .then((res) => {
+    //     console.log(res)
+    //     console.log("user saved")
+    //   }).catch(err => err)
+
+      
     window.location.replace("http://localhost:3000/dashboard");
 
   };

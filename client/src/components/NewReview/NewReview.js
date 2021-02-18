@@ -41,7 +41,7 @@ const NewReview = () => {
       topic: topicState,
       review: textState,
       rating: rateState,
-      related_titles: simState,
+      similar_topics: simState,
     };
     console.log(form);
     API.saveReview(form);
