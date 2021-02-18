@@ -1,5 +1,5 @@
 <p text-align="center">
-<img src = "public/images/readme/Readmelogo.png" >
+<img src = "client/public/images/readme/Readmelogo.png" >
 </p>
 
 ---
