@@ -17,7 +17,6 @@ import API from "../../utils/API";
 const NewReview = () => {
   //  States
   const [topicState, setTopic] = useState("");
-  const [titleState, setTitle] = useState("");
   const [textState, setText] = useState("");
   const [simState, setSim] = useState([]);
   const [rateState, setRate] = useState(0);
@@ -28,7 +27,7 @@ const NewReview = () => {
   const [activityState, setActivity] = useState([]);
 
   useEffect(() => {
-    API.getReviews()
+    API.getTopics()
       .then((res) => {
         setActivity(res.data);
         console.log(res.data);
@@ -41,7 +40,6 @@ const NewReview = () => {
     event.preventDefault();
     let form = {
       topic: topicState,
-      title: titleState,
       review: textState,
       rating: rateState,
       related_titles: simState,
@@ -67,7 +65,7 @@ const NewReview = () => {
             className="topic-picker"
             data={activityState}
             size="md"
-            placeholder="topic (required)"
+            placeholder="topic"
             defaultValue=""
             block
             onSelect={function (value, item) {
@@ -75,24 +73,13 @@ const NewReview = () => {
             }}
           />
 
-          <FormGroup>
-            <FormControl
-              className="review-title"
-              rows={5}
-              name="textarea"
-              placeholder="review title"
-              onChange={function (value) {
-                setTitle(value);
-              }}
-            />
-          </FormGroup>
 
           <FormGroup>
             <FormControl
               rows={3}
               className="review-text"
               componentclass="textarea"
-              placeholder="my review"
+              placeholder="quick review ( optional )"
               onChange={function (value) {
                 setText(value);
               }}
@@ -100,10 +87,11 @@ const NewReview = () => {
           </FormGroup>
 
           {/* SIMILAR TOPICS */}
+          <p>this helps us spread the word</p>
           <FormGroup>
             <TagPicker
               className="similar-topics"
-              data={Entertainment}
+              data={ activityState }
               defaultValue=""
               placeholder="similar topics"
               onSelect={function (value, item) {
@@ -111,7 +99,6 @@ const NewReview = () => {
               }}
               block
             />
-            <p>this helps us spread the word</p>
           </FormGroup>
 
           {/* REVIEW RATING */}
