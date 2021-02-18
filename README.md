@@ -108,7 +108,7 @@ Allowing users to create an account through hearth. Easier way to save preferenc
 
 Repo: https://github.com/neylonmc/Hearth
 
-Deployed App: https://hearthcommunity.netlify.app
+Deployed App: https://hearthcommunity.herokuapp.com/
 
 Login Page:
 
