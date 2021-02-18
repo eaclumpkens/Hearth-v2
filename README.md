@@ -57,6 +57,7 @@ $ npm start
 
 - React
 - MongoDB
+- Mongoose
 - Animate.css
 - React Suite
 - Google Login
@@ -111,27 +112,27 @@ Deployed App: https://hearthcommunity.netlify.app
 
 Login Page:
 
-![Login Page](public/images/readme/loginREAD.png)
+![Login Page](client/public/images/readme/loginREAD.png)
 
 Dashboard:
 
-![Dashboard](public/images/readme/dashboard.png)
+![Dashboard](client/public/images/readme/dashboard.png)
 
 Profile:
 
-![Profile](public/images/readme/profile.png)
+![Profile](client/public/images/readme/profile.png)
 
 Topics:
 
-![Topics](public/images/readme/browse.png)
+![Topics](client/public/images/readme/browse.png)
 
 New Post:
 
-![NewPost](public/images/readme/newtopic.png)
+![NewPost](client/public/images/readme/newtopic.png)
 
 About:
 
-![About](public/images/readme/about.png)
+![About](client/public/images/readme/about.png)
 
 ## Created by
 
