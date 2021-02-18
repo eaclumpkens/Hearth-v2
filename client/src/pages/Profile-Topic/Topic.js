@@ -10,24 +10,49 @@ import FollowButton from "../../components/FollowButton/FollowButton";
 function Topic() {
   let { id } = useParams();
 
-  const [commentsObject, setData] = useState([]);
+    // const [commentsObject, setData] = useState([]);
+    const [topicObject, setTopic] = useState({
+        category: []
 
-  const [topicObject, setTopic] = useState({
-    category: [],
-  });
+    });
 
-  useEffect(() => {
-    console.log(id);
-    // loadActivities(topic);
+    useEffect(() => {
+        console.log(id)
+        loadTopics(id);
+    },[]);
 
-    loadTopic(id);
-  }, []);
+    function loadTopics(id) {
+        API.getActivitybyTitle(id)
+            .then((res) => {
+                setTopic(res.data[0])
+                console.log(topicObject);
+                // API.getCommentsByActivity(res.data[0]._id)
+                //     .then((res) => {
+                //         setData(res.data);
+                //     }).catch(err => err)
+            }).catch(err => err)
+    }
 
-  function loadTopic(id) {
-    API.getTopic(id)
-      .then((res) => setTopic(res.data))
-      .catch((err) => console.log(err));
-  }
+    console.log(topicObject);
+
+  // const [commentsObject, setData] = useState([]);
+
+  // const [topicObject, setTopic] = useState({
+  //   category: [],
+  // });
+
+  // useEffect(() => {
+  //   console.log(id);
+  //   // loadActivities(topic);
+
+  //   loadTopic(id);
+  // }, []);
+
+  // function loadTopic(id) {
+  //   API.getTopic(id)
+  //     .then((res) => setTopic(res.data))
+  //     .catch((err) => console.log(err));
+  // }
 
   // function loadActivities(topic) {
   //     API.getActivitybyTitle(topic)
