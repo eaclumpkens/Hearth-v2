@@ -29,10 +29,6 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/hearthdb", {
 
 // Add routes, both API and view
 app.use(routes);
-<<<<<<< HEAD
-=======
-// app.use("/user", user);
->>>>>>> 570920f9e0865c1fc178281b3379c36ef6c770c0
 
 // Start the API server
 app.listen(PORT, function () {
