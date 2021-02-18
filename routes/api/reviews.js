@@ -14,10 +14,9 @@ router
     .delete(reviewsController.remove);
 
 router
-    .route("/:topic")
-    .get(reviewsController.findByTopic)
+    .route("/topic/:id")
+    .get(reviewsController.findByTopicId)
     .put(reviewsController.update)
-    .delete(reviewsController.remove);
- 
+    .delete(reviewsController.remove);    
 
 module.exports = router;

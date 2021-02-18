@@ -37,8 +37,8 @@ export default {
   getReview: function(id) {
     return axios.get("/api/reviews/" + id);
   },
-  getReviewsByTopic: function(topic) {
-    return axios.get("/api/reviews/" + topic)
+  getReviewsByTopicId: function(topic_id) {
+    return axios.get("/api/reviews/topic/" + topic_id)
   },
   deleteReview: function(id) {
     return axios.delete("/api/reviews/" + id);

@@ -14,9 +14,9 @@ module.exports = {
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
     },
-    findByTopic: function(req, res) {
+    findByTopicId: function(req, res) {
       db.Review
-        .find({topic: req.params.topic })
+        .find({topic_id: req.query })
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
     },

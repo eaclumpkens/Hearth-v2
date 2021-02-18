@@ -11,6 +11,7 @@ import "rsuite/lib/styles/index.less";
 import "./Browse.css";
 import allTopics from "../../utils/Topics";
 import API from "../../utils/API";
+import Entertainment from "../../utils/TopEntertainment";
 
 export default function Topics() {
   let { path, url } = useRouteMatch();
@@ -48,11 +49,11 @@ function Topic() {
   const [formObject, setFormObject] = useState([]);
 
   useEffect(() => {
-    loadActivities(category);
+    loadActivities();
   }, [category]);
 
-  function loadActivities(category) {
-    API.getTopicsByCategory(category)
+  function loadActivities() {
+    API.getTopics()
       .then((res) => {
         console.log(res);
         setFormObject(res.data);
@@ -63,22 +64,31 @@ function Topic() {
   return (
     <div className="animate__animated animate__fadeIn">
       <ButtonGroup className="button-container">
-        {formObject.map((data) => {
-          return (
-            <Button
-              id="results-button"
-              href={`/topic/${data._id}`}
-              bordered
-            >
-              <img
-                id="topic-image"
-                src={data.Image || "/images/no-image.png"}
-                alt={data.topic}
-              />
-              <p id="topic-title">{data.topic}</p>
-            </Button>
-          );
-        })}
+      { formObject.map(data => {
+              if (data.category === category) {
+                return(
+                  <Col 
+                    id="results-container"
+                    className="animate__animated animate__fadeIn"
+                    md={4} 
+                    sm={12}
+                  >
+                      <Button  
+                        id="results-button"
+                        href={ `/topic/${data._id}` }
+                        bordered
+                      >
+                          <img 
+                              id= "topic-image"
+                              src= { data.image }
+                              alt= { data.topic }
+                          />
+                      </Button>
+                  </Col>
+
+                );
+              } 
+            }) }
       </ButtonGroup>
     </div>
   );

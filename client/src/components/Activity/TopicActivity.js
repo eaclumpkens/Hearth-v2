@@ -23,7 +23,10 @@ function TopicActivity() {
                 console.log(res.data.topic)
                 setTopic(res.data)
 
-                API.getReviewsByTopic(res.data.topic)
+                API.getReviewsByTopicId(res.data._id)
+                    .then(res => {
+                        console.log(res);
+                    })
             }).catch(err => err)
     }, []);
 
