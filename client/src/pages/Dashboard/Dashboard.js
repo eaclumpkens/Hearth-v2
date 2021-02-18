@@ -15,20 +15,18 @@ import DashActivity from "../../components/DashActivity/DashActivity";
 import Entertainment from "../../utils/TopEntertainment";
 
 function Dashboard() {
-  const [userState, setUser] = useState({
-    Name: ""
-  });
+  const [userState, setUser] = useState([]);
 
   useEffect(() => {
     setUser(JSON.parse(window.sessionStorage.getItem("myUserEntity")));
 
-    // API.getUser(userState.Id)
-    //   .then((res) => {
-    //     console.log(res.data);
-    //   })
-    //   .catch((err) => err);  
-  }, []);  
-  // }, [userState.Id]);
+    API.getUser(userState.Id)
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((err) => err);  
+  // }, []);  
+  }, [userState.Id]);
 
 
     return (
@@ -47,7 +45,7 @@ function Dashboard() {
                   <a href="/profile">
                     <img
                       className = "dash-avatar"
-                      src= "./images/no-avatar.jpg"
+                      src={userState.Image || "./images/no-avatar.jpg"}
                       // src={userState.Image || "./images/no-avatar.jpg"}
                       alt="dashboard user avatar"
                     />
@@ -56,7 +54,7 @@ function Dashboard() {
               </Row>
             <Row>
               <Col>
-                <h1 className="dash-username">username</h1>
+                <h1 className="dash-username">{userState.Name}</h1>
                 {/* <h1 className="dash-username">{userState.Name}</h1> */}
 
               </Col>
