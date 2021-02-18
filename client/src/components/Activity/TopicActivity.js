@@ -50,8 +50,8 @@ function TopicActivity() {
                             block
                         >
                             <Row>
-                                <Col md={20}>
-                                    <h2 id="card-title">{data.author}</h2>
+                                <Col md={18}>
+                                    <h2 id="card-title">Reviewed by <strong>{data.author}</strong></h2>
                                 </Col>
                                 <Col md={4}>
                                     <h3 id="card-rating">Score: {data.rating} <FontAwesomeIcon icon={faStar} /></h3>
@@ -62,19 +62,27 @@ function TopicActivity() {
                                     <p id="card-review">{data.review}</p>
                                 </Col>
                             </Row>
-                            <Row>
-                                { data.similar_topics.map(topic => {
-                                    console.log(topic)
 
-                                    return(
-                                        <Col md={4}>
-                                        <p id="similar-topic">{topic}</p>
+                            <div id="sub-container">
+                                <Row>
+                                    <Col md={24}>
+                                        <h4 id="sub-title">similar topics :</h4>
                                     </Col>
-                                    )
+                                </Row>
+                                <Row>
+                                    { data.similar_topics.map(topic => {
+                                        console.log(topic)
+
+                                        return(
+                                            <Col md={4}>
+                                                <p id="card-subtitle">{topic}</p>
+                                            </Col>
+                                        )
 
 
-                                })}
-                            </Row>
+                                    })}
+                                </Row>
+                            </div>
     
                         </Col>
                     )

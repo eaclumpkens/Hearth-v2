@@ -11,6 +11,7 @@ mongoose.connect(
 const reviewSeed = [
     {
         topic: "Dune",
+        topic_id: "602c1a41db488b73ad044fe8",
         author: "Nina Anderson",
         review: "Awesome from start to finish",
         rating: 5,
@@ -18,6 +19,7 @@ const reviewSeed = [
     },
     {
         topic: "Dune",
+        topic_id: "602c1a41db488b73ad044fe8",
         author: "Roger Graham",
         review: "Really entertaining",
         rating: 4,
@@ -25,6 +27,7 @@ const reviewSeed = [
     },
     {
         topic: "Dune",
+        topic_id: "602c1a41db488b73ad044fe8",
         author: "Jacob Smith",
         review: "A bit slow, but got there in the end",
         rating: 3,
@@ -32,6 +35,7 @@ const reviewSeed = [
     },
     {
         topic: "Dune",
+        topic_id: "602c1a41db488b73ad044fe8",
         author: "Niilo Keto",
         review: "Not worth it",
         rating: 2,
@@ -39,6 +43,7 @@ const reviewSeed = [
     },
     {
         topic: "Dune",
+        topic_id: "602c1a41db488b73ad044fe8",
         author: "Ruby Morris",
         review: "Nope",
         rating: 1,

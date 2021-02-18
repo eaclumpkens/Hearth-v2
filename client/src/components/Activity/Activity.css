@@ -1,22 +1,28 @@
+.activity-container {
+    padding: 2em;
+}
+
 #activity-card {
     display: block;
     margin: auto;
     text-align: left;
-    border: 1px solid #d95515;
-    border-radius: 2%;
-    margin: 0.5em 0em;
+    border: 0.1em solid #d95515;
+    margin: 0.8em 0em;
+    background: rgba(217,165,31, 0.3)
 }
 
 #card-title {
     padding-top: 1.5em;
     padding-left: 0.2em;
-    font-weight: 700 !important;
+    font-weight: 400 !important;
 }
 
 #card-rating {
-    font-size: 120% !important;
+    font-size: 140% !important;
     letter-spacing: 0.1em;
     padding-left: 0.2em;
+    padding-top: 1em;
+    font-weight: 400;
 }
 
 #card-review {
