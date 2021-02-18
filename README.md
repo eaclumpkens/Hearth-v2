@@ -6,7 +6,7 @@
 
 Designed with community in mind, hearth allows users to rate, review and find something worth reading, listening or watching almost instantly.
 
-[Check out the deployed site here](hearthcommunity.herokuapp.com/)
+[Check out the deployed site here](https://hearthcommunity.herokuapp.com/)
 
 ## Table of Contents
 
