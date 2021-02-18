@@ -13,27 +13,19 @@
   "private": true,
   "dependencies": {
     "axios": "^0.21.1",
-<<<<<<< HEAD
     "bcryptjs": "^2.4.3",
     "express": "^4.17.1",
-=======
-    "express": "^4.16.3",
->>>>>>> 570920f9e0865c1fc178281b3379c36ef6c770c0
     "http-proxy-middleware": "^1.0.6",
     "if-env": "^1.0.4",
     "mongoose": "^5.3.16",
     "morgan": "^1.10.0",
     "passport": "^0.4.1",
-<<<<<<< HEAD
-    "passport-local": "^1.0.0"
-=======
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-google-login": "^5.2.2",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.2",
     "rsuite": "^4.8.9"
->>>>>>> 570920f9e0865c1fc178281b3379c36ef6c770c0
   },
   "devDependencies": {
     "concurrently": "^5.3.0",
