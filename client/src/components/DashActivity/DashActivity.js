@@ -32,7 +32,10 @@ function DashActivity() {
     const [ dashObject, setDash ] = useState([]);
 
     useEffect(() => {
+      loadTopics()
+    }, [])
 
+    function loadTopics() {
       API.getTopics()
       .then(res => {
         console.log(res.data)

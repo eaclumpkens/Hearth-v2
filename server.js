@@ -1,8 +1,8 @@
 const express = require("express");
-const bodyParser = require("body-parser");
-const morgan = require("morgan");
+// const bodyParser = require("body-parser");
+// const morgan = require("morgan");
 const mongoose = require("mongoose");
-const passport = require("./passport");
+// const passport = require("./passport");
 const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -16,24 +16,25 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Connect to the Mongo DB
-mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://localhost/hearthdb',
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false
-  }
-);
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/hearthdb", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+  useFindAndModify: false,
+});
 
 // Passport
-app.use(passport.initialize());
-app.use(passport.session()); // calls the deserializeUser
+// app.use(passport.initialize());
+// app.use(passport.session()); // calls the deserializeUser
 
 // Add routes, both API and view
 app.use(routes);
+<<<<<<< HEAD
+=======
+// app.use("/user", user);
+>>>>>>> 570920f9e0865c1fc178281b3379c36ef6c770c0
 
 // Start the API server
-app.listen(PORT, function() {
+app.listen(PORT, function () {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
