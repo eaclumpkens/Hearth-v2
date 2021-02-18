@@ -20,6 +20,14 @@
     height: 10em;
 }
 
+#topic-title {
+    color: #dee2e6 !important;
+    text-align: center;
+    line-height: 2em;
+    word-wrap: break-word;
+    white-space: initial;
+}
+
 
 @media (max-width: 480px) {
 
