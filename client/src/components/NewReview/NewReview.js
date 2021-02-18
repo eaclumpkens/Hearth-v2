@@ -17,6 +17,7 @@ import API from "../../utils/API";
 const NewReview = () => {
   //  States
   const [topicState, setTopic] = useState("");
+  const [ authorState, setAuthor ] = useState("");
   const [textState, setText] = useState("");
   const [simState, setSim] = useState([]);
   const [rateState, setRate] = useState(0);
@@ -32,6 +33,9 @@ const NewReview = () => {
         setActivity(res.data);
       })
       .catch((err) => console.log(err));
+
+      setAuthor(JSON.parse(window.sessionStorage.getItem("myUserEntity")));
+
   }, []);
 
 
@@ -39,6 +43,7 @@ const NewReview = () => {
     event.preventDefault();
     let form = {
       topic: topicState,
+      author: authorState.Name,
       review: textState,
       rating: rateState,
       similar_topics: simState,
