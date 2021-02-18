@@ -30,9 +30,9 @@ export class Navbar extends Component {
               </div>
             );
           })}
-          
-          <GoogleLogout/>
-          <SearchBar />
+
+          <GoogleLogout />
+          {/* <SearchBar /> */}
         </div>
       </nav>
     );
