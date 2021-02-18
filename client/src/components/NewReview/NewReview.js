@@ -30,11 +30,10 @@ const NewReview = () => {
     API.getTopics()
       .then((res) => {
         setActivity(res.data);
-        console.log(res.data);
-        console.log(activityState);
       })
       .catch((err) => console.log(err));
   }, []);
+
 
   function handleFormSubmit(event) {
     event.preventDefault();
@@ -69,7 +68,7 @@ const NewReview = () => {
             defaultValue=""
             block
             onSelect={function (value, item) {
-              setTopic(item.title);
+              setTopic(item.topic);
             }}
           />
 
@@ -95,7 +94,7 @@ const NewReview = () => {
               defaultValue=""
               placeholder="similar topics"
               onSelect={function (value, item) {
-                setSim(item.title);
+                setSim(item.topic);
               }}
               block
             />
