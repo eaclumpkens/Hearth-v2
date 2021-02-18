@@ -39,7 +39,7 @@ function DashActivity() {
         setDash(res.data)
       }).catch(err => err)
 
-    }, [dashObject] );
+    }, [dashObject.data] );
 
 
     return(
