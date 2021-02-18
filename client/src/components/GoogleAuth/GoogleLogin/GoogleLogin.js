@@ -30,14 +30,12 @@ function Login() {
     sessionStorage.setItem('myUserEntity',JSON.stringify(myUserEntity));
     console.log(myUserEntity)
 
-    // API.saveUser(newUser)
-    //   .then((res) => {
-    //     console.log(res)
-    //     console.log("user saved")
-    //   }).catch(err => err)
-
-      
-    window.location.replace("http://localhost:3000/dashboard");
+    API.saveUser(newUser)
+      .then((res) => {
+        console.log(res)
+        console.log("user saved")
+      }).catch(err => err)
+    window.location.replace("https://hearthcommunity.herokuapp.com/dashboard" || "http://localhost:3000/dashboard");
 
   };
   
