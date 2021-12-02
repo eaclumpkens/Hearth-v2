@@ -1,149 +1,96 @@
-<p text-align="center">
-<img src = "client/public/images/readme/Readmelogo.png" >
-</p>
-
----
-
-Designed with community in mind, hearth allows users to rate, review and find something worth reading, listening or watching almost instantly.
-
-[Check out the deployed site here](https://hearthcommunity.herokuapp.com/)
-
 ## Table of Contents
 
-- [User Story](#user-story)
+- [Concept](#concept)
+- [Technologies](#technologies)
 - [Installation](#installation)
-- [Technology](#technology)
-- [Functionality](#functionality)
+- [Testing](#functionality)
 - [Future Developments](#future-developments)
 - [Links and Screenshots](#links-and-screenshots)
 - [Created By](#created-by)
 - [License](#license)
 
-## User Story
+## Concept
 
-The average person takes 23 minutes to find something to watch on Netflix and over 7 minutes picking out their next movie. With more time to watch, read and listen than ever before, we have developed an app that allows users to skip the long review threads and answer the question "What's next?" more quickly.
+API POST endpoint: receives a list of 100 robots from API endpoint, providing their current position on an xy-plane along and battery life. The endpoint makes an HTTP request to the robots endpoint and return which robot is the best to transport the load based on which one is closest the load's location. If there is more than 1 robot within 10 distance units of the load, the robot with the highest charge is returned.
 
-```
-AS an individual, I would like to find something to watch, read or listen.
-I WANT to be able to make a decision quickly.
-AND find a topic with good reviews/ratings.
-SO I find something to stream or read in a timely manner.
+## Technologies
 
-```
+- JavaScript
+- NodeJS
+- Netlify
 
 ## Installation
 
-To use this project, first clone the repo in your terminal using the command below:
+To use this project, first clone and navigate to the project repo in your terminal using the commands below:
 
 ```
-$ git clone https://github.com/neylonmc/Hearth.git
+$ git clone https://github.com/eaclumpkens/robot-routing.git
+$ cd ./robot-routing
 ```
 
-Once the repo is cloned, run the following command:
+Once the repo is cloned and you've ensured you are in the correct repo, if not previously installed, run the following code to install NPM & Netlify's CLI:
+
+```
+$ npm install -g npm
+$ npm i netlify-cli -g
+```
+
+Install NPM packages:
 
 ```
 $ npm i
 ```
 
-To start the server, run the following command:
+To start the server locally, run the following command:
 
 ```
-$ npm start
+$ ntl dev
 ```
 
-## Technology
+![Run Locally](media/localhost.gif)
 
-### APIs and Libraries
-
-- React
-- MongoDB
-- Mongoose
-- Animate.css
-- React Suite
-- Google Login
-- IMDB API
-- OpenLibrary
-- Random User API
-
-## Functionality
+Ensure server is running locally at
 
 ```
-GIVEN a login page, I use my Google account to login in.
-THEN I am presented with my dashboard.
-WHEN I click "profile", I am redirected to my profile page.
-THEN when I click "topics", I can browse the different topics in the app.
-WHEN I click “new post", I am presented with three different choices.
-THEN I fill out the corresponding information based on which choice I click.
-WHEN I click “submit”, the review, topic or poll will be available for others.
-WHEN I click "about", I am presented with information about hearth.
-THEN I can logout if I would no longer like to be logged in to the app.
-WHEN I click the settings icon, I have the ability change preferences.
-THEN I am able to save these preferences for my account.
-WHEN I want to quickly find a topic, I can search in the search bar.
-SO I can find something to watch, read or listen to quickly and efficiently.
+http://localhost:8888/
+```
+
+
+## Testing
+
+Create POST request using API Platform such as Postman, ensuring the request body is valid JSON
 
 ```
+{
+  "loadId": 321,
+  "x": 40,
+  "y": 35
+}
+
+```
+
+Payload response should be displayed as following: 
+![Postman](media/postman.gif)
 
 ## Future Developments
 
-### More Topics
+**Additional Error Handlings**
+Ensure all error cases are handled and try/catches used appropriately
 
-**Allow users to be able to search and review more topics**
+**Automated Testing**
+Implement a library such as JestJS or otherwise to integrate automated testing
 
-Building a larger community through hearth is our ultimate goal. Allowing users to find more topics such as crafts, kid friendly activities, or fun outdoor parks would be ideal. This way, hearth could reach a larger audience and have topics for everyone.
+**Prod Endpoint**
+POST API requests to lvie URL rather than necessitating local hosting
 
-### Where To Stream Or Buy
+**.Net**
+I'd like to be able to recreate this project using the .Net framework
 
-**Allow users to be able to see where they can stream shows, music or buy a book**
-
-Browsing reviews is an easy way to find something to keep yourself entertained quickly. But do you have that streaming service or is it on Amazon Prime? This information will allow users to stream, read and listen to topics even quicker.
-
-### Create An Account
-
-**Allowing users to create an account through the application instead of through Google.**
-
-Allowing users to create an account through hearth. Easier way to save preferences, get notifications and make the application more tailored to the user.
-
-## Links and Screenshots
-
-Repo: https://github.com/neylonmc/Hearth
-
-Deployed App: https://hearthcommunity.herokuapp.com/
-
-Login Page:
-
-![Login Page](client/public/images/readme/loginREAD.png)
-
-Dashboard:
-
-![Dashboard](client/public/images/readme/dashboard.png)
-
-Profile:
-
-![Profile](client/public/images/readme/profile.png)
-
-Topics:
-
-![Topics](client/public/images/readme/browse.png)
-
-New Post:
-
-![NewPost](client/public/images/readme/newtopic.png)
-
-About:
-
-![About](client/public/images/readme/about.png)
 
 ## Created by
 
-- [Elisabeth Clumpkens](https://github.com/eaclumpkens "Visit Elisabeth's GitHub")
-- [Dylan Frank](https://github.com/drfrank22 "Visit Dylan's GitHub")
-- [Meaghan Neylon](https://github.com/neylonmc "Visit Meaghan's GitHub")
+- [Elisabeth Clumpkens](mailto:eaclumpkens@gmail.com)
 
 ## License
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-```
-
-```
